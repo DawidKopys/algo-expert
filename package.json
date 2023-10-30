@@ -6,8 +6,8 @@
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit",
-    "test-old": "node --test",
-    "test": "tsc --noEmit && node --import tsx --test ./**/*.test.ts"
+    "test": "tsc --noEmit && node --loader tsx --test ./**/*.test.ts",
+    "test-only": "tsc --noEmit && node --loader tsx --test --test-only ./**/*.test.ts"
   },
   "keywords": [],
   "author": "",

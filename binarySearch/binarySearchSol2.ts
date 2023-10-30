@@ -1,6 +1,3 @@
-const array = [0, 1, 21, 33, 45, 45, 61, 71, 72, 73]
-const target = 33
-
 // sol2 - recursive
 // O(logN) time, O(logN) space
 export function binarySearch(array: number[], target: number): number {
@@ -25,6 +22,3 @@ function binarySearchHelper(
   }
   return mid
 }
-
-const result = binarySearch(array, target)
-console.log('result :', result)

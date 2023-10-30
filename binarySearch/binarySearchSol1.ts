@@ -1,6 +1,3 @@
-const array = [0, 1, 21, 33, 45, 45, 61, 71, 72, 73]
-const target = 33
-
 // sol1 - iterative
 // O(logN) time, O(1) space
 export function binarySearch(array: number[], target: number): number {
@@ -22,5 +19,3 @@ export function binarySearch(array: number[], target: number): number {
   return -1
 }
 
-const result = binarySearch(array, target)
-console.log('result :', result)

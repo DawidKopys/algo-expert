@@ -32,8 +32,8 @@ export function greatestNumberGood(array: number[]) {
   return max
 }
 
-console.log(greatestNumberBad(arr))
-console.log('stepsBad :', stepsBad)
+// console.log(greatestNumberBad(arr))
+// console.log('stepsBad :', stepsBad)
 
-console.log(greatestNumberGood(arr))
-console.log('stepsGood :', stepsGood)
+// console.log(greatestNumberGood(arr))
+// console.log('stepsGood :', stepsGood)

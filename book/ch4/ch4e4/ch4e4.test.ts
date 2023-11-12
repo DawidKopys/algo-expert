@@ -1,5 +1,5 @@
-import { test, describe, mock } from 'node:test'
-import { greatestNumberBad } from './ch4-e4.js'
+import { test, describe } from 'node:test'
+import { greatestNumberBad } from './ch4e4.js'
 import assert from 'node:assert'
 
 describe('greatestNumberBad', () => {

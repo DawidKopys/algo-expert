@@ -6,14 +6,15 @@
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit",
-    "test": "tsc --noEmit && node --loader tsx --test ./**/*.test.ts",
-    "test-only": "tsc --noEmit && node --loader tsx --test --test-only ./**/*.test.ts"
+    "test": "glob -c \"node --no-warnings --loader tsx --test\" \"./**/*.test.ts\"",
+    "test-only": "glob -c \"node --no-warnings --loader tsx --test --test-only\" \"./**/*.test.ts\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.8.9",
+    "glob": "^10.3.10",
     "ts-node": "^10.9.1",
     "tsx": "^3.14.0",
     "typescript": "^5.2.2"

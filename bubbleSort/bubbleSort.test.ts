@@ -2,7 +2,7 @@ import { test } from 'node:test'
 import { bubbleSort } from './bubbleSort.js'
 import assert from 'node:assert'
 
-test.only('bubbleSort', async (t) => {
+test('bubbleSort', async (t) => {
   await t.test('sorts array', () => {
     const arr = [8, 5, 2, 9, 5, 6, 3]
     const result = bubbleSort(arr)

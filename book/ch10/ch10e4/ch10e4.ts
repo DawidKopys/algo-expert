@@ -29,8 +29,8 @@ export function printNumbers(arr: DeepArray<number>) {
   }
 }
 
-export function flatten(arr: any[], acc?: number[]) {
-  const flat = acc || []
+export function flatten<T>(arr: DeepArray<T>, acc?: T[]): T[] {
+  const flat: T[] = acc || []
 
   for (const item of arr) {
     if (Array.isArray(item)) {
@@ -43,5 +43,6 @@ export function flatten(arr: any[], acc?: number[]) {
   return flat
 }
 
-printNumbers(array)
+// printNumbers(array)
+// const res = flatten(array)
 // console.log('flatten(array) :', flatten(array))

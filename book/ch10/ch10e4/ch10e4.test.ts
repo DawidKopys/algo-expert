@@ -2,9 +2,9 @@ import { test, mock } from 'node:test'
 import assert from 'node:assert'
 import { flatten, printNumbers } from './ch10e4'
 
-test.only('printNumbers', async (t) => {
+test('printNumbers', async (t) => {
   await t.test('prints as many times as there are items in the arrays', () => {
-    const mocked = t.mock.method(console, 'log')
+    const mocked = t.mock.method(console, 'log', () => {})
 
     const array = [
       1,
@@ -60,7 +60,7 @@ test.only('printNumbers', async (t) => {
   })
 })
 
-test.only('flatten', async (t) => {
+test('flatten', async (t) => {
   await t.test('flattens array', () => {
     const array = [
       1,

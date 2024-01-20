@@ -21,7 +21,7 @@ export function findSuccessor(tree: BinaryTree, node: BinaryTree) {
   const inorderNodes = new Set<BinaryTree>()
   inorderSearch(tree, inorderNodes)
 
-  console.log('nodes in order:', Array.from(inorderNodes).map((node) => node.value))
+  // console.log('nodes in order:', Array.from(inorderNodes).map((node) => node.value))
 
   let prevNode: BinaryTree | null = null
   for (const currentNode of inorderNodes) {

@@ -54,17 +54,19 @@ function getRightmostParent(node: BinaryTree): BinaryTree | null {
   return null
 }
 
-const root = new BinaryTree(1)
-root.left = new BinaryTree(2, root)
-root.right = new BinaryTree(3, root)
-root.left.left = new BinaryTree(4, root.left)
-root.left.right = new BinaryTree(5, root.left)
-root.left.left.left = new BinaryTree(6, root.left.left)
+// test 2
+// const root = new BinaryTree(1)
+// root.left = new BinaryTree(2, root)
+// root.right = new BinaryTree(3, root)
+// root.left.left = new BinaryTree(4, root.left)
+// root.left.right = new BinaryTree(5, root.left)
+// root.left.left.left = new BinaryTree(6, root.left.left)
 
-printBinaryTree2(root)
-const result = findSuccessor(root, root.left.right)
-console.log('result?.value :', result?.value) // expected 1
+// printBinaryTree2(root)
+// const result = findSuccessor(root, root.left.right)
+// console.log('result?.value :', result?.value) // expected 1
 
+// test 3
 // const root2 = new BinaryTree(1)
 // root2.left = new BinaryTree(3)
 // root2.right = new BinaryTree(3)

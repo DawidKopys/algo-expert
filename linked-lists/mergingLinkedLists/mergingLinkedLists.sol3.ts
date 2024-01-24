@@ -5,22 +5,11 @@ import { LinkedList } from '../singlyLinkedList/LinkedList'
 export function mergingLinkedLists (linkedListOne: Node, linkedListTwo: Node) {
   let first: Node | null = linkedListOne
   let second: Node | null = linkedListTwo
-  console.log('first :', first)
-  console.log('second :', second)
-  
 
-  console.group('while')
   while (first !== second) {
-    console.log('first :', first)
-    console.log('second :', second)
-    
     first = first === null ? linkedListTwo : first.next;
     second = second === null ? linkedListOne : second.next;
   }
-  console.groupEnd()
-  
-
-  console.log('returning stuff :', first)
   
   return first
 }

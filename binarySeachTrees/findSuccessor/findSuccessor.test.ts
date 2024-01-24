@@ -6,7 +6,7 @@ import { findSuccessor as sol2 } from './findSuccessor.sol2'
 const solutions = [sol1, sol2]
 
 solutions.forEach((sol, idx) => {
-  test.only(`findSuccessor sol${idx+1}`, async (t) => {
+  test(`findSuccessor sol${idx+1}`, async (t) => {
     await t.test('returns null for an inputTree with a single node', () => {
       const inputTree = new BinaryTree(1)
 

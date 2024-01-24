@@ -1,1 +1,0 @@
-// czy ja w ogóle tego potrzebuję? a moze klasa Node mi wystarczy?

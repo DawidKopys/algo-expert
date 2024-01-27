@@ -1,4 +1,4 @@
-class Node<T> {
+class Node<T = number> {
   value: T
   left: Node<T> | null
   right: Node<T> | null

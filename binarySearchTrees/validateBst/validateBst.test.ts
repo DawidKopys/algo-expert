@@ -6,7 +6,7 @@ import { validateBst as sol2 } from './validateBst.sol2'
 const solutions = [sol1, sol2]
 
 solutions.forEach((sol, idx) => {
-  test.only(`validateBST sol${idx + 1}`, async (t) => {
+  test(`validateBST sol${idx + 1}`, async (t) => {
     await t.test('validates single node BST', () => {
       const tree = new BST(10)
       const result = sol(tree)

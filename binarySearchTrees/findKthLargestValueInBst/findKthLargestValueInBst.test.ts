@@ -9,7 +9,7 @@ import { findKthLargestValueInBst as sol2 } from './findKthLargestValueInBst.sol
 const solutions = [sol1, sol2]
 
 solutions.forEach((sol, idx) => {
-  test.only(`findKthLargestValueInBst sol${idx + 1}`, async (t) => {
+  test(`findKthLargestValueInBst sol${idx + 1}`, async (t) => {
     await t.test('should correctly find the kth largest value in a BST', () => {
       const tree = new BST(15)
       tree.left = new BST(5)

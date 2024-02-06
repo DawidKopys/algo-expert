@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert'
-import { staircaseTraversal } from './staircase-traversal.js'
+import { staircaseTraversal } from './staircaseTraversal.js'
 
 test('staircaseTraversal', async (t) => {
   await t.test('returns the number of paths when maxSteps = 2', () => {

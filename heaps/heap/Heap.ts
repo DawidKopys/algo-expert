@@ -67,8 +67,8 @@ export class Heap {
       const greaterChildIndex = this.getGreaterChildIndex(trickleNodeIndex)
 
       // no greater child -> trickle node is in correct position -> we are done
-      if (greaterChildIndex === null) break;
-      
+      if (greaterChildIndex === null) break
+
       // compare tricle node with greater child
       if (trickleNode < this.data[greaterChildIndex]) {
         // swap trickle node with greater child
@@ -92,17 +92,22 @@ export class Heap {
     const leftChildIndex = this.leftChildIndex(index)
     const rightChildIndex = this.rightChildIndex(index)
 
-    if (this.data[leftChildIndex] && this.data[rightChildIndex]) {
+    if (
+      this.data[leftChildIndex] !== undefined &&
+      this.data[rightChildIndex] !== undefined
+    ) {
       const greaterChildIndex =
-      this.data[leftChildIndex] > this.data[rightChildIndex]
-        ? leftChildIndex
-        : rightChildIndex
+        this.data[leftChildIndex] > this.data[rightChildIndex]
+          ? leftChildIndex
+          : rightChildIndex
 
       return greaterChildIndex
     }
 
-    if (this.data[leftChildIndex]) return this.data[leftChildIndex]
-    if (this.data[rightChildIndex]) return this.data[rightChildIndex]
+    if (this.data[leftChildIndex] !== undefined)
+      return this.data[leftChildIndex]
+    if (this.data[rightChildIndex] !== undefined)
+      return this.data[rightChildIndex]
 
     return null
   }
@@ -127,5 +132,3 @@ console.log(heapToString(heap.data))
 console.log('---------')
 heap.delete()
 console.log(heapToString(heap.data))
-
-

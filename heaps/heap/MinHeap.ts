@@ -118,7 +118,10 @@ export class MinHeap {
     const leftChildIndex = MinHeap.getLeftChildIndex(index)
     const rightChildIndex = MinHeap.getRightChildIndex(index)
 
-    if (this.heap[leftChildIndex] && this.heap[rightChildIndex]) {
+    if (
+      this.heap[leftChildIndex] !== undefined &&
+      this.heap[rightChildIndex] !== undefined
+    ) {
       // both children exist -> pick smaller
       const smallerChild =
         this.heap[leftChildIndex] > this.heap[rightChildIndex]
@@ -129,14 +132,13 @@ export class MinHeap {
     }
 
     // one child -> return the only child
-    if (this.heap[leftChildIndex]) return leftChildIndex
-    if (this.heap[rightChildIndex]) return rightChildIndex
+    if (this.heap[leftChildIndex] !== undefined) return leftChildIndex
+    if (this.heap[rightChildIndex] !== undefined) return rightChildIndex
 
     // no children -> return null
     return null
   }
 }
-
 // test
 // const array = [48, 12, 24, 7, 8, -5, 24, 391, 24, 56, 2, 6, 8, 41]
 // const heap = new MinHeap(array)

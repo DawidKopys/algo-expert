@@ -34,20 +34,22 @@ export class Heap {
     let trickleNodeIndex = 0
 
     while (true) {
-      const smallerOrGreaterChildIndex = this.getSmallerOrGreaterChildIndex(trickleNodeIndex)
+      const smallerOrGreaterChildIndex =
+        this.getSmallerOrGreaterChildIndex(trickleNodeIndex)
 
       // there is no smaller child -> there are no children -> we are done
       if (smallerOrGreaterChildIndex === null) break
 
       // compare tricle node with smaller child
-      if (this.comparisonFunc(this.heap[smallerOrGreaterChildIndex], this.heap[trickleNodeIndex])) {
-      // if (this.comparisonFunc(this.heap[trickleNodeIndex], this.heap[smallerOrGreaterChildIndex])) {
-      // if (this.heap[trickleNodeIndex] > this.heap[smallerOrGreaterChildIndex]) {
-        // swap trickle node with smaller child
-        ;[this.heap[trickleNodeIndex], this.heap[smallerOrGreaterChildIndex]] = [
+      if (
+        this.comparisonFunc(
           this.heap[smallerOrGreaterChildIndex],
           this.heap[trickleNodeIndex]
-        ]
+        )
+      ) {
+        // swap trickle node with smaller child
+        ;[this.heap[trickleNodeIndex], this.heap[smallerOrGreaterChildIndex]] =
+          [this.heap[smallerOrGreaterChildIndex], this.heap[trickleNodeIndex]]
 
         // update trickle node index
         trickleNodeIndex = smallerOrGreaterChildIndex
@@ -69,7 +71,6 @@ export class Heap {
       const parentNodeValue = this.heap[parentIndex]
 
       if (this.comparisonFunc(trickleNodeValue, parentNodeValue)) {
-      // if (parentNodeValue > trickleNodeValue) {
         // swap parent with trickle node
         ;[this.heap[trickleNodeIndex], this.heap[parentIndex]] = [
           this.heap[parentIndex],
@@ -129,11 +130,16 @@ export class Heap {
     const leftChildIndex = Heap.getLeftChildIndex(index)
     const rightChildIndex = Heap.getRightChildIndex(index)
 
-    if (this.heap[leftChildIndex] && this.heap[rightChildIndex]) {
+    if (
+      this.heap[leftChildIndex] !== undefined &&
+      this.heap[rightChildIndex] !== undefined
+    ) {
       // both children exist -> pick smaller
       const smallerChild =
-        // this.comparisonFunc(this.heap[leftChildIndex], this.heap[rightChildIndex])
-        this.comparisonFunc(this.heap[rightChildIndex], this.heap[leftChildIndex])
+        this.comparisonFunc(
+          this.heap[rightChildIndex],
+          this.heap[leftChildIndex]
+        )
           ? rightChildIndex
           : leftChildIndex
 
@@ -141,8 +147,8 @@ export class Heap {
     }
 
     // one child -> return the only child
-    if (this.heap[leftChildIndex]) return leftChildIndex
-    if (this.heap[rightChildIndex]) return rightChildIndex
+    if (this.heap[leftChildIndex] !== undefined) return leftChildIndex
+    if (this.heap[rightChildIndex] !== undefined) return rightChildIndex
 
     // no children -> return null
     return null

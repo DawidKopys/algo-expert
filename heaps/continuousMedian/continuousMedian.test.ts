@@ -2,7 +2,7 @@ import { test, beforeEach } from 'node:test'
 import assert from 'node:assert'
 import { ContinuousMedianHandler } from './continuousMedian'
 
-test.only('ContinuousMedianHandler', async (t) => {
+test('ContinuousMedianHandler', async (t) => {
   let handler: ContinuousMedianHandler
 
   beforeEach(() => {

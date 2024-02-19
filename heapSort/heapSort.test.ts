@@ -2,7 +2,7 @@ import { test } from 'node:test'
 import { strict as assert } from 'node:assert'
 import { heapSort } from './heapSort'
 
-test.only('heapSort', async (t) => {
+test('heapSort', async (t) => {
   await t.test('sorts array', () => {
     const arr = [8, 5, 2, 9, 5, 6, 3]
     const expected = [...arr].sort((a, b) => a - b)

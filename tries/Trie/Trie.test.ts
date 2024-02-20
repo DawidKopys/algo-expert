@@ -2,7 +2,7 @@ import { test } from 'node:test'
 import assert from 'node:assert'
 import { Trie } from './Trie'
 
-test.only('Trie class', async (t) => {
+test('Trie class', async (t) => {
   await t.test('insert method', () => {
     const trie = new Trie()
     trie.insert('test')

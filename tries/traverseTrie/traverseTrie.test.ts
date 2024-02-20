@@ -3,7 +3,7 @@ import assert from 'node:assert'
 import { Trie } from '../Trie/Trie'
 import { traverseTrie } from './traverseTrie'
 
-test.only('traverseTrie function', async (t) => {
+test('traverseTrie function', async (t) => {
   await t.test('with single word', () => {
     const trie = new Trie()
     trie.insert('test')

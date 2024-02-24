@@ -2,7 +2,7 @@ import { test } from 'node:test'
 import assert from 'node:assert'
 import { SuffixTrie } from './suffixTrieConstruction'
 
-test.only('SuffixTrie', async (t) => {
+test('SuffixTrie', async (t) => {
   await t.test('constructor with no arguments', () => {
     const trie = new SuffixTrie()
     assert.deepStrictEqual(trie.root, {})

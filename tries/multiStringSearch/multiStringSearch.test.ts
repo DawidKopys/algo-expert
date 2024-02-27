@@ -7,7 +7,7 @@ import { multiStringSearch as sol3 } from './multiStringSearch.sol3'
 const solutions = [sol1, sol2, sol3]
 
 solutions.forEach((sol, idx) => {
-  test.only(`multiStringSearch function sol${idx + 1}`, async (t) => {
+  test(`multiStringSearch function sol${idx + 1}`, async (t) => {
   await t.test('with multiple small strings', () => {
     const bigString = 'this is a big string'
     const smallStrings = ['this', 'is', 'a', 'big', 'string']

@@ -1,4 +1,4 @@
-import { Vertex } from '../Vertex/Vertex'
+import { Vertex } from '../Vertex/undirectedGraph/Vertex'
 
 export function dfsSearch(
   vertex: Vertex,

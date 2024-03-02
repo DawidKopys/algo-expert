@@ -1,4 +1,4 @@
-import { Vertex } from "../Vertex/Vertex";
+import { Vertex } from "../Vertex/undirectedGraph/Vertex";
 
 export function bfsSearch(vertex: Vertex, searchValue: any): Vertex | null {
   const visitedVertices = new Set<Vertex>()

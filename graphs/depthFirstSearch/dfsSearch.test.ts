@@ -1,7 +1,7 @@
 import { test } from 'node:test'
 import assert from 'node:assert'
 import { dfsSearch } from './dfsSearch'
-import { Vertex } from '../Vertex/Vertex'
+import { Vertex } from '../Vertex/undirectedGraph/Vertex'
 
 test('dfsSearch', async (t) => {
   await t.test('search a graph with one vertex', () => {

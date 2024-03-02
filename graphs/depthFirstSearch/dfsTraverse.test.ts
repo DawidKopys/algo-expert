@@ -1,7 +1,7 @@
 import { test } from 'node:test'
 import assert from 'node:assert'
 import { dfsTraverse } from './dfsTraverse'
-import { Vertex } from '../Vertex/Vertex'
+import { Vertex } from '../Vertex/undirectedGraph/Vertex'
 
 test('dfsTraverse', async (t) => {
   const logMessages: any[] = []

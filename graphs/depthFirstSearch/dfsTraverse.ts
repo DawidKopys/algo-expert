@@ -1,4 +1,4 @@
-import { Vertex } from "../Vertex/Vertex";
+import { Vertex } from "../Vertex/undirectedGraph/Vertex";
 
 export function dfsTraverse(vertex: Vertex, visitedVertices = new Set<Vertex>()) {
   visitedVertices.add(vertex.value)

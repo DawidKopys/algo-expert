@@ -7,7 +7,7 @@ import { Vertex } from '../Vertex/undirectedGraph/Vertex'
 const solutions = [sol1, sol2]
 
 solutions.forEach((sol, idx) => {
-  test.only(`${sol.name}`, async (t) => {
+  test(`${sol.name}`, async (t) => {
     await t.test('find shortest path in a graph with one vertex', () => {
       const vertex = new Vertex('A')
   

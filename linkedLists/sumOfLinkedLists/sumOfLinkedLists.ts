@@ -1,8 +1,8 @@
 import { Node } from '../node/Node'
 import { LinkedList } from '../singlyLinkedList/LinkedList'
 
-// sol 1 - "the easy solution" // todo: try harder sol, just iterating through lists
-// sol 1 - "dumb" solution - first, get the numbers, add them and then build new linked list with the result
+// sol 1 - "the easy solution"
+// sol 1 - "naive" solution - first, get the numbers, add them and then build new linked list with the result
 export function sumOfLinkedLists(linkedListOne: Node, linkedListTwo: Node) {
   // get number 1
   let number1str = ''

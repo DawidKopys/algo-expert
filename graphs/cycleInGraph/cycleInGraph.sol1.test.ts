@@ -2,7 +2,7 @@ import { test } from 'node:test'
 import assert from 'node:assert'
 import { isStartOfCycle, cycleInGraph } from './cycleInGraph.sol1'
 
-test.only('isStartOfCycle', async (t) => {
+test('isStartOfCycle', async (t) => {
   // this test case shows difference between sol1 and sol2
   // in sol1, isStartOfCycle only checks if start node is a start of a cycle
   // ... so it returns false in below test case

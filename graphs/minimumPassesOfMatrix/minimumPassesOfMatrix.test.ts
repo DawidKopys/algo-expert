@@ -6,7 +6,7 @@ import { minimumPassesOfMatrix as sol2 } from './minimumPassesOfMatrix.sol2'
 const solutions = [sol1, sol2]
 
 solutions.forEach((minimumPassesOfMatrix, index) => {
-  test.only(`minimumPassesOfMatrix sol${index + 1}`, async (t) => {
+  test(`minimumPassesOfMatrix sol${index + 1}`, async (t) => {
     await t.test('returns the minimum number of passes', () => {
       const matrix = [
         [0, -2, -1],
